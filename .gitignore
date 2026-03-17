@@ -1,4 +1,3 @@
-.env
 
 /* Terraform state files and lock files */
 .terraform/
@@ -10,3 +9,6 @@
 .terraform.lock.hcl
 
 node_modules/
+config.bat
+temp_auto_push.bat
+temp_interactive_push.bat
