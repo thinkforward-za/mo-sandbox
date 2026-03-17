@@ -40,5 +40,5 @@ data "aws_iam_policy_document" "react-bucket-policy" {
 # Attach the generated policy JSON to the S3 bucket
 resource "aws_s3_bucket_policy" "react-policy" {
   bucket = aws_s3_bucket.mo-sandbox-s3.id
-  policy = data.aws_iam_policy_document.react-bucket-policy
+  policy = data.aws_iam_policy_document.react-bucket-policy.json
 }
