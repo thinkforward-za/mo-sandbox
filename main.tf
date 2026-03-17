@@ -22,7 +22,7 @@ resource "aws_s3_bucket_public_access_block" "react-app" {
 data "aws_iam_policy_document" "react-bucket-policy" {
   statement {
     actions = ["s3:GetObject"]
-    resources = ["${aws.s3_bucket.mo-sandbox-s3.arn}/*"]
+    resources = ["${aws_s3_bucket.mo-sandbox-s3.arn}/*"]
 
     principals {
       type = "Service"

@@ -5,5 +5,5 @@ output "cloudfront_url" {
 
 output "s3_bucket_name" {
     description = "The name of the S3 bucket hosting the react app"
-  value = aws_s3_bucket.react_app.bucket
+  value = aws_s3_bucket.mo-sandbox-s3.bucket
 }
