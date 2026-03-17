@@ -58,7 +58,7 @@ jobs:
               if: github.ref == 'refs/heads/main' && github.event_name == 'push'
               uses: actions/setup-node@v3
               with:
-                  node-version: '18'
+                  node-version: '22'
                   cache: 'npm'
                   cache-dependency-path: react-app-tesla/package-lock.json
 
