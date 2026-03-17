@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+html {
+    box-sizing: border-box;
+    padding: 0;
+
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar {
+    @apply flex items-center justify-between w-full fixed top-0 z-10 h-[5.4rem] p-[3.2rem];
+}
+
+.nav-link {
+    @apply text-2xl font-semibold text-[#181b21] mx-[0.8rem] px-[0.8rem] py-[0.4rem] rounded-[0.8rem] bg-transparent hover:bg-[#18121b]/10 transition-all duration-100;
+}
+
+.car-section {
+    @apply w-full h-screen relative;
+}
+
+.car-img {
+    @apply w-full h-full object-cover;
+}
+
+.car-details {
+    @apply absolute top-[20%] left-[50%] text-center;
+}
+
+.transform-50 {
+    transform: translate(-50%, -50%);
+}
+
+.model-name {
+    @apply text-[4rem] text-[#393c41] font-semibold;
+}
+
+.tag-line {
+    @apply text-[#4c4d51] text-2xl;
+}
+
+.car-buttons {
+    @apply absolute top-[85%] left-[50%] flex flex-col lg:flex-row;
+}
+
+.btn {
+    @apply cursor-pointer text-2xl text-white bg-[#171a20]/80 font-medium uppercase my-3 py-[0.4rem] px-[2.4rem] rounded-[3.2rem] w-102 h-16;
+}
+
+.inventory {
+    @apply text-[#393c41] bg-white/60 lg:ml-8;
+}
+
+.down-svg {
+    @apply block w-full h-20 mx-auto absolute top-[93%] animate-bounce;
+}

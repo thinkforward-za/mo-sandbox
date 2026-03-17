@@ -53,3 +53,28 @@ jobs:
                   TF_VAR_aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
                   TF_VAR_aws_region: us-east-1
               run: terraform apply -auto-approve tfplan
+
+            - name: Set up Node.js
+              if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+              uses: actions/setup-node@v3
+              with:
+                  node-version: '18'
+                  cache: 'npm'
+                  cache-dependency-path: react-app-tesla/package-lock.json
+
+            - name: Install dependencies
+              if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+              run: |
+                  cd react-app-tesla
+                  npm ci
+
+            - name: Build React app
+              if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+              run: |
+                  cd react-app-tesla
+                  npm run build
+
+            - name: Deploy to S3
+              if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+              run: |
+                  aws s3 sync react-app-tesla/dist/ s3://mo-sandbox-s3-bucket-ga --delete --exact-timestamps

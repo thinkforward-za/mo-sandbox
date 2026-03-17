@@ -1,0 +1,103 @@
+      <Section idName="modelX" classes="car-section">
+                <img
+                    src="./images/modelX.jfif"
+                    alt="Model X image"
+                    className="car-img"
+                />
+
+                <HeroTitle
+                    divClasses="car-details transform-50"
+                    titleClasses="model-name"
+                    taglineClasses="tag-line"
+                    title="Model X"
+                    tagline="Order Online for "
+                    emphasisText="Touchless Delivery"
+                />
+                <HeroCTA divClasses="car-buttons transform-50" />
+
+                <a href="#modelY">
+                    <img
+                        className="down-svg"
+                        src={downArrow}
+                        alt="down arrow"
+                    />
+                </a>
+            </Section>
+
+            <Section idName="modelY" classes="car-section">
+                <img
+                    src="./images/modelY.jfif"
+                    alt="Model Y image"
+                    className="car-img"
+                />
+
+                <HeroTitle
+                    divClasses="car-details transform-50"
+                    titleClasses="model-name"
+                    taglineClasses="tag-line"
+                    title="Model Y"
+                    tagline="Order Online for "
+                    emphasisText="Touchless Delivery"
+                />
+                <HeroCTA divClasses="car-buttons transform-50" />
+
+                <a href="#solarRoof">
+                    <img
+                        className="down-svg"
+                        src={downArrow}
+                        alt="down arrow"
+                    />
+                </a>
+            </Section>
+
+            <Section idName="solarRoof" classes="car-section">
+                <img
+                    src="./images/solarRoof.jfif"
+                    alt="Solar Roof image"
+                    className="car-img"
+                />
+
+                <HeroTitle
+                    divClasses="car-details transform-50"
+                    titleClasses="model-name"
+                    taglineClasses="tag-line"
+                    title="Solar Roof"
+                    tagline="Order Online for "
+                    emphasisText="Touchless Delivery"
+                />
+                <HeroCTA divClasses="car-buttons transform-50" />
+
+                <a href="#solarPanels">
+                    <img
+                        className="down-svg"
+                        src={downArrow}
+                        alt="down arrow"
+                    />
+                </a>
+            </Section>
+
+            <Section idName="solarPanels" classes="car-section">
+                <img
+                    src="./images/solarRoof.jfif"
+                    alt="Solar Panels image"
+                    className="car-img"
+                />
+
+                <HeroTitle
+                    divClasses="car-details transform-50"
+                    titleClasses="model-name"
+                    taglineClasses="tag-line"
+                    title="Solar Panels"
+                    tagline="Order Online for "
+                    emphasisText="Touchless Delivery"
+                />
+                <HeroCTA divClasses="car-buttons transform-50" />
+
+                {/* <a href="#solarPanels">
+                    <img
+                        className="down-svg"
+                        src={downArrow}
+                        alt="down arrow"
+                    />
+                </a> */}
+            </Section>
